@@ -15,9 +15,11 @@ func _physics_process(_delta):
 		queue_free()
 
 func hit(_ball):
+	$Confetti.emitting = true
 	die()
 
 func die():
+	$Confetti.emitting = true
 	dying = true
 	collision_layer = 0
 	$ColorRect.hide()

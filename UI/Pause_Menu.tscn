@@ -1,19 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://ci5q3vmuimsfr"]
+[gd_scene load_steps=3 format=3 uid="uid://ci5q3vmuimsfr"]
 
 [ext_resource type="Script" path="res://UI/Pause_Menu.gd" id="1"]
+[ext_resource type="Theme" uid="uid://cjd4ync6iriyb" path="res://Assets/new_theme.tres" id="1_ssut0"]
 
 [node name="Pause_Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ssut0")
 script = ExtResource("1")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color(0, 0, 0, 0.752941)
+color = Color(0, 0.596078, 0.552941, 0.121569)
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1

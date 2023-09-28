@@ -1,7 +1,15 @@
-[gd_scene format=3 uid="uid://dywcp8o4vsibs"]
+[gd_scene load_steps=2 format=3 uid="uid://dywcp8o4vsibs"]
+
+[ext_resource type="Texture2D" uid="uid://cfxjxgn5f34k4" path="res://Assets/png/element_red_polygon_glossy.png" id="1_3s36x"]
 
 [node name="Indicator" type="Node2D"]
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(5, 5)
+scale = Vector2(0.208333, 0.217391)
+texture = ExtResource("1_3s36x")
+
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_right = 10.0
 offset_bottom = 10.0

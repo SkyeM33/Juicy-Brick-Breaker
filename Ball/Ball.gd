@@ -21,9 +21,10 @@ func _ready():
 	
 
 func _on_Ball_body_entered(body):
+	$Confetti.emitting = true
 	if body.has_method("hit"):
 		body.hit(self)
-		accelerate = true	
+		accelerate = true
 
 func _input(event):
 	if not released and event.is_action_pressed("release"):

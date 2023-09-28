@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bnhjgrwkyui25"]
+[gd_scene load_steps=4 format=3 uid="uid://bnhjgrwkyui25"]
 
 [ext_resource type="Script" path="res://Powerups/Powerup.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://bidmff8wmtxb5" path="res://Assets/png/element_yellow_diamond.png" id="2_sxitb"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(30, 30)
@@ -8,7 +9,13 @@ size = Vector2(30, 30)
 [node name="Powerup" type="Area2D"]
 script = ExtResource("1")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(7.15256e-07, 7.15256e-07)
+scale = Vector2(0.666667, 0.666667)
+texture = ExtResource("2_sxitb")
+
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_left = -15.0
 offset_top = -15.0
 offset_right = 15.0
@@ -16,5 +23,10 @@ offset_bottom = 15.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("1")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(7.15256e-07, 7.15256e-07)
+scale = Vector2(0.666667, 0.666667)
+polygon = PackedVector2Array(24, -6.8, 24, 6, 6.8, 24, -6, 24, -24, 6.8, -24, -6.8, -6, -23.8, 6, -24)
 
 [connection signal="body_entered" from="." to="." method="_on_Powerup_body_entered"]
