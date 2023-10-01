@@ -4,6 +4,8 @@ var min_speed = 100.0
 var max_speed = 600.0
 var speed_multiplier = 1.0
 var accelerate = false
+var tween = create_tween()
+var time_highlight = 0.4
 
 var released = true
 
@@ -25,6 +27,11 @@ func _on_Ball_body_entered(body):
 	if body.has_method("hit"):
 		body.hit(self)
 		accelerate = true
+	if tween:
+		tween.kill()
+	tween = create_tween().set_parallel(true)
+	$Highlight.modulate.a = 1.0
+	tween.tween_property($Highlight, "modulate:a", 0, time_highlight)
 
 func _input(event):
 	if not released and event.is_action_pressed("release"):

@@ -23,6 +23,9 @@ func _input(event):
 
 func hit(_ball):
 	$Stars.emitting = true
+	scale = Vector2(2,2)
+	var tween = create_tween()
+	tween.tween_property(self, "scale", Vector2(1,1), 0.3)
 
 func powerup(payload):
 	for c in $Powerups.get_children():
