@@ -5,6 +5,10 @@ var new_position = Vector2.ZERO
 var dying = false
 var tween = create_tween()
 
+var sway_amplitude = 3.0
+var sway_initial_position = Vector2.ZERO
+var sway_randomizer = Vector2.ZERO
+
 var powerup_prob = 0.1
 
 func _ready():
@@ -13,12 +17,20 @@ func _ready():
 	position.y = -100
 	tween = create_tween()
 	tween.tween_property(self, "position", new_position, 0.5).set_trans(Tween.TRANS_BOUNCE)
+	if score >= 100: $Brick_Sprite_B.modulate.a = 1
+	elif score >= 90: $Brick_Sprite_G.modulate.a = 1
+	elif score >= 80: $Brick_Sprite_P.modulate.a = 1
+	elif score >= 70: $Brick_Sprite_R.modulate.a = 1
+	elif score >= 60: $Brick_Sprite_Y.modulate.a = 1
+	else: $Brick_Sprite.modulate.a = 1
 
 func _physics_process(_delta):
 	if dying:
 		queue_free()
 
 func hit(_ball):
+	var Brick_Sound = get_node("/root/Game/Brick_Sound")
+	Brick_Sound.play()
 	die()
 
 func die():

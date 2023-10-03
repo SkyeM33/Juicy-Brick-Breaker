@@ -26,6 +26,8 @@ func hit(_ball):
 	scale = Vector2(2,2)
 	var tween = create_tween()
 	tween.tween_property(self, "scale", Vector2(1,1), 0.3)
+	var paddle_sound = get_node("/root/Game/Paddle_Sound")
+	paddle_sound.play()
 
 func powerup(payload):
 	for c in $Powerups.get_children():

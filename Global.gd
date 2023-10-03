@@ -12,6 +12,9 @@ var starting_in = 0
 var fever_decay = 0.1
 var feverish = false
 
+var sway_index = 0
+var sway_period = 1.0
+
 
 var default_starting_in = 4
 var default_lives = 5
@@ -30,6 +33,7 @@ func _physics_process(_delta):
 		update_fever(-fever_decay)
 	else:
 		feverish = false
+	sway_index += sway_period
 		
 
 func _input(event):

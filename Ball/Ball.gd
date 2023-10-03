@@ -6,6 +6,7 @@ var speed_multiplier = 1.0
 var accelerate = false
 var tween = create_tween()
 var time_highlight = 0.4
+var h_rotate = 0.0
 
 var released = true
 
@@ -62,6 +63,15 @@ func change_size(s):
 
 func change_speed(s):
 	speed_multiplier = s
+	
+func comet():
+	var Comet_Container = get_node_or_null("/root/Game/Comet_Container")
+	if Comet_Container != null:
+		var sprite = $Sprite2D.duplicate()
+		sprite.global_position = global_position
+		Comet_Container.add_child(sprite)
 
 func die():
+	var die_sound = get_node("/root/Game/Death_Sound")
+	die_sound.play()
 	queue_free()

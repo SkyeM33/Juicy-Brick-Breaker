@@ -10,7 +10,7 @@ friction = 0.0
 bounce = 1.0
 
 [sub_resource type="CircleShape2D" id="1"]
-radius = 21.1896
+radius = 24.0
 
 [sub_resource type="Gradient" id="Gradient_aivm4"]
 offsets = PackedFloat32Array(0, 0.490066, 1)
@@ -38,7 +38,6 @@ offset_right = 10.0
 offset_bottom = 10.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource("1")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]

@@ -1,8 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://bjvdmnbj44w6x"]
+[gd_scene load_steps=12 format=3 uid="uid://bjvdmnbj44w6x"]
 
 [ext_resource type="Script" path="res://Brick/Brick.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://b2uvu4ybr8db8" path="res://Assets/png/element_grey_rectangle.png" id="2_eoi7q"]
+[ext_resource type="Texture2D" uid="uid://de4jprqlepytf" path="res://Assets/png/element_blue_rectangle.png" id="3_6phdl"]
 [ext_resource type="Texture2D" uid="uid://cn0bj46qamkin" path="res://Assets/confetti.png" id="3_msnqj"]
+[ext_resource type="Texture2D" uid="uid://cbot1nxc3wdhv" path="res://Assets/png/element_yellow_rectangle.png" id="3_x180k"]
+[ext_resource type="Texture2D" uid="uid://c7bffk1s05dql" path="res://Assets/png/element_red_rectangle.png" id="4_6fu2a"]
+[ext_resource type="Texture2D" uid="uid://j7ct6bve2xv7" path="res://Assets/png/element_purple_rectangle.png" id="5_ytdj6"]
+[ext_resource type="Texture2D" uid="uid://dusbxp5r0qekb" path="res://Assets/png/element_green_rectangle.png" id="6_f1ekr"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(87, 30)
@@ -20,9 +25,40 @@ point_count = 2
 script = ExtResource("1")
 
 [node name="Brick_Sprite" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(-1.5, 4.76837e-07)
 scale = Vector2(1.39063, 1)
 texture = ExtResource("2_eoi7q")
+
+[node name="Brick_Sprite_Y" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-1.5, 4.76837e-07)
+scale = Vector2(1.39063, 1)
+texture = ExtResource("3_x180k")
+
+[node name="Brick_Sprite_R" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-1.5, 4.76837e-07)
+scale = Vector2(1.39063, 1)
+texture = ExtResource("4_6fu2a")
+
+[node name="Brick_Sprite_P" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-1.5, 4.76837e-07)
+scale = Vector2(1.39063, 1)
+texture = ExtResource("5_ytdj6")
+
+[node name="Brick_Sprite_G" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-1.5, 4.76837e-07)
+scale = Vector2(1.39063, 1)
+texture = ExtResource("6_f1ekr")
+
+[node name="Brick_Sprite_B" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-1.5, 4.76837e-07)
+scale = Vector2(1.39063, 1)
+texture = ExtResource("3_6phdl")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bd5m3yq1k5fx8"]
+[gd_scene load_steps=20 format=3 uid="uid://bd5m3yq1k5fx8"]
 
 [ext_resource type="Script" path="res://Brick/Brick_Container.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://dmwf8wjdir6y5" path="res://Paddle/Paddle.tscn" id="2"]
@@ -11,6 +11,12 @@
 [ext_resource type="PackedScene" uid="uid://r1nm10jeqyta" path="res://UI/Instructions.tscn" id="8"]
 [ext_resource type="Script" path="res://Effects/Fever.gd" id="9"]
 [ext_resource type="Script" path="res://UI/Camera2D.gd" id="10_ijrg2"]
+[ext_resource type="AudioStream" uid="uid://c21iloyculp0b" path="res://Assets/Brick SongShort.mp3" id="12_qls3g"]
+[ext_resource type="AudioStream" uid="uid://bky0bpbrhspon" path="res://Assets/Bonk3Fixed.wav" id="13_6hueh"]
+[ext_resource type="AudioStream" uid="uid://bgk01ssls5j3g" path="res://Assets/Bonk1Fixed.wav" id="14_3ohfx"]
+[ext_resource type="AudioStream" uid="uid://b35smxmhpu7pn" path="res://Assets/Bonk2Fixed.wav" id="15_t40eo"]
+[ext_resource type="AudioStream" uid="uid://bm4gar5fjlnqb" path="res://Assets/Crash.wav" id="16_nvqi0"]
+[ext_resource type="Script" path="res://Effects/Comet_Container.gd" id="17_mc4cy"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(200, 1000)
@@ -93,5 +99,25 @@ script = ExtResource("9")
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
 script = ExtResource("10_ijrg2")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_qls3g")
+volume_db = -2.506
+autoplay = true
+
+[node name="Wall_Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_6hueh")
+
+[node name="Paddle_Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_3ohfx")
+
+[node name="Brick_Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_t40eo")
+
+[node name="Death_Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_nvqi0")
+
+[node name="Comet_Container" type="Node2D" parent="."]
+script = ExtResource("17_mc4cy")
 
 [connection signal="timeout" from="Fever/Timer" to="Fever" method="_on_Timer_timeout"]
