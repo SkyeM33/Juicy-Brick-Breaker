@@ -1,13 +1,14 @@
 # Project Name
 
-Context and date
+Project 3, Juicy Brick Breaker
+Last Update: 10/1/2023
 
-Description
+A fun brick breaker clone.
 
 
 ## Implementation
 
-Which features you included
+Included screen shake for ball death, wall bounce, and brick death. Made paddle expand when hit. Made walls change colour and expand when hit. Gave ball highlight on contact. Gave contact particles to paddle, ball, and bricks. Made bricks bounce in. Gave powerups a little bounce.
 
 
 ## References
