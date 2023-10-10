@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://dmwf8wjdir6y5"]
+[gd_scene load_steps=8 format=3 uid="uid://dmwf8wjdir6y5"]
 
 [ext_resource type="Script" path="res://Paddle/Paddle.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://haav7iwbmi7s" path="res://Assets/png/paddleBlu.png" id="2_os1dq"]
 [ext_resource type="Texture2D" uid="uid://c65xjfdjf2f86" path="res://Assets/png/particleCartoonStar.png" id="3_eeeu4"]
+[ext_resource type="Texture2D" uid="uid://bslun1gjredvp" path="res://Assets/Eye.png" id="4_cfwqr"]
+[ext_resource type="Texture2D" uid="uid://cobujkvakb5y2" path="res://Assets/Pupil.png" id="5_lbeoe"]
+[ext_resource type="Texture2D" uid="uid://df8mcbv73wmyp" path="res://Assets/Mouth.png" id="6_ceo0l"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(100, 20)
@@ -14,13 +17,6 @@ script = ExtResource("1")
 position = Vector2(0.500001, 9.83477e-07)
 scale = Vector2(0.971154, 0.833333)
 texture = ExtResource("2_os1dq")
-
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-offset_left = -50.0
-offset_top = -10.0
-offset_right = 50.0
-offset_bottom = 10.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2.08165e-12, 2.08165e-12)
@@ -41,3 +37,24 @@ texture = ExtResource("3_eeeu4")
 direction = Vector2(0, -1)
 initial_velocity_min = 300.0
 initial_velocity_max = 300.0
+
+[node name="Eye1" type="Sprite2D" parent="."]
+position = Vector2(-38, -20)
+texture = ExtResource("4_cfwqr")
+
+[node name="Pupil" type="Node2D" parent="Eye1"]
+
+[node name="Sprite" type="Sprite2D" parent="Eye1/Pupil"]
+texture = ExtResource("5_lbeoe")
+
+[node name="Eye2" type="Sprite2D" parent="."]
+position = Vector2(39, -20)
+texture = ExtResource("4_cfwqr")
+
+[node name="Pupil" type="Node2D" parent="Eye2"]
+
+[node name="Sprite" type="Sprite2D" parent="Eye2/Pupil"]
+texture = ExtResource("5_lbeoe")
+
+[node name="Mouth" type="Sprite2D" parent="."]
+texture = ExtResource("6_ceo0l")

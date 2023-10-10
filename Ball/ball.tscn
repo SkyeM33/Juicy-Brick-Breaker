@@ -10,7 +10,7 @@ friction = 0.0
 bounce = 1.0
 
 [sub_resource type="CircleShape2D" id="1"]
-radius = 24.0
+radius = 27.0
 
 [sub_resource type="Gradient" id="Gradient_aivm4"]
 offsets = PackedFloat32Array(0, 0.490066, 1)
@@ -41,8 +41,7 @@ offset_bottom = 10.0
 shape = SubResource("1")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-visible = false
-polygon = PackedVector2Array(8, -22.1, 24, -11.4, 24, 8.8, 20.1, 23, -19.8, 23, -20, 20.4, -24, 10.4, -24, -11, -22.6, -11, -6, -23, 8, -23)
+polygon = PackedVector2Array(8, -18, 24, -5, 20, 7, 15, 23, -15, 23, -16, 19, -20, 9, -24, -5, -21, -8, -6, -19, 0, -23)
 
 [node name="Confetti" type="CPUParticles2D" parent="."]
 emitting = false

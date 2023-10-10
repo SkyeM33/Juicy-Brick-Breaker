@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://r1nm10jeqyta" path="res://UI/Instructions.tscn" id="8"]
 [ext_resource type="Script" path="res://Effects/Fever.gd" id="9"]
 [ext_resource type="Script" path="res://UI/Camera2D.gd" id="10_ijrg2"]
-[ext_resource type="AudioStream" uid="uid://c21iloyculp0b" path="res://Assets/Brick SongShort.mp3" id="12_qls3g"]
+[ext_resource type="AudioStream" uid="uid://l8tbdhc70b3g" path="res://Assets/Done Brick song2.mp3" id="12_vuq6g"]
 [ext_resource type="AudioStream" uid="uid://bky0bpbrhspon" path="res://Assets/Bonk3Fixed.wav" id="13_6hueh"]
 [ext_resource type="AudioStream" uid="uid://bgk01ssls5j3g" path="res://Assets/Bonk1Fixed.wav" id="14_3ohfx"]
 [ext_resource type="AudioStream" uid="uid://b35smxmhpu7pn" path="res://Assets/Bonk2Fixed.wav" id="15_t40eo"]
@@ -101,7 +101,7 @@ anchor_mode = 0
 script = ExtResource("10_ijrg2")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("12_qls3g")
+stream = ExtResource("12_vuq6g")
 volume_db = -2.506
 autoplay = true
 
